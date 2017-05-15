@@ -1,19 +1,21 @@
-require "hike_app"
-require "rspec"
-require "pry"
+require "spec_helper"
 
+describe Hike do
+  it { should have_many :ratings }
+  it { should belong_to :region }
+  it { should have_and_belong_to_many :features }
+  it { should have_and_belong_to_many :landmarks }
+end
 
-# example project spec
+describe Feature do
+  it { should have_and_belong_to_many :hikes }
+end
 
-# describe 'Palindrome#isWord?' do
-#   let(:word) { Palindrome.new }
+describe Landmark do
+  it { should have_and_belong_to_many :hikes }
+end
 
-#   it "returns true if the word has at least one vowel" do
-#     expect(word.is_word?("word")).to eq true
-#   end
-
-#   it "returns false if the word does not have a vowel" do
-#     expect(word.is_word?("wrd")).to eq false
-#   end
-
-# end
+describe HikeRating do
+  it { should belong_to :hike }
+  it { should belong_to :rating }
+end

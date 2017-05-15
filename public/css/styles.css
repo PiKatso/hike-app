@@ -1,0 +1,18 @@
+#logo-text {
+  text-align: center;
+}
+
+#footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+#test-space {
+  height:3000px;
+  background: black;
+}
