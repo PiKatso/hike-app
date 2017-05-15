@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'sinatra/activerecord'
 require './lib/hike_app'
 require 'pry'
 
