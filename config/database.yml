@@ -1,0 +1,6 @@
+development:
+  adapter: postgresql
+  database: hike_app
+test:
+  adapter: postgresql
+  database: hike_app_test
