@@ -1,9 +1,16 @@
-#header {
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
 
+h2, h3, h4, h5 {
+  font-family: 'News Cycle', sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 #header h1 {
-  font-family: 'Montserrat', sans-serif;
   text-align: center;
   padding: 75px 0;
   color: #80a0bd;
@@ -38,7 +45,6 @@
 .region-box h2 {
   color: #656565;
   padding-bottom: 20px;
-  font-family: 'News Cycle', sans-serif;
 }
 
 .region-box p {
@@ -51,4 +57,8 @@
 
 .region-box h2:hover {
   color: #7895af;
+}
+
+.region-title {
+  padding-bottom: 30px;
 }

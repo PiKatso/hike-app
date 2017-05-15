@@ -1,5 +1,7 @@
 require "spec_helper"
 
+
+
 describe Hike do
   it { should have_many :ratings }
   it { should belong_to :region }
@@ -18,4 +20,9 @@ end
 describe HikeRating do
   it { should belong_to :hike }
   it { should belong_to :rating }
+end
+
+describe Region do
+
+
 end
