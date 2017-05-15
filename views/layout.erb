@@ -2,23 +2,23 @@
 <html>
   <head>
     <title></title>
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link  rel='stylesheet' href="/css/styles.css" >
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <div class="header">
-      <h1 id="logo-text">The Hike App</h1>
+    <div id="header">
+      <h1>The Hike App</h1>
     </div>
-    <div class="container">
-    <hr>
-      <div id="test-space">
-      </div>
+    <div class="container" id="main">
+
       <%= yield %>
     </div>
     <div id="footer">
-      <h2>footer</h2>
+      <h5>footer</h5>
     </div>
   </body>
 </html>
