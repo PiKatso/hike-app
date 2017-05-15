@@ -1,4 +1,4 @@
-# _Shoe Store Database_
+# _Hike App_
 
 #### _Application for shoe brands and shoe stores. Built with Ruby, 12 May 2017_
 
