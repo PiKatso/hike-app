@@ -7,7 +7,7 @@ require 'pry'
 also_reload('lib/**/*.rb')
 
 get('/') do
-  @urban_sprawl = Region.find(12)
+  # @urban_sprawl = Region.find(12)
   erb :index
 end
 
