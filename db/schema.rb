@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170516153801) do
+ActiveRecord::Schema.define(version: 20170516173058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20170516153801) do
     t.string "distance"
     t.string "elevation"
     t.string "difficulty"
+    t.string "url"
   end
 
   create_table "hikes_landmarks", force: :cascade do |t|

@@ -6,10 +6,13 @@ h2, h3, h4, h5 {
   font-family: 'News Cycle', sans-serif;
 }
 
+<<<<<<< HEAD
 a {
   color: inherit;
 }
 
+=======
+>>>>>>> 00e2890d183469c66e65633206fcdc1bddf4baae
 a:hover {
   text-decoration: none;
 }
@@ -32,7 +35,10 @@ a:hover {
   left: 0;
   background-color: #6687a5;
   text-align: center;
+<<<<<<< HEAD
   color: white
+=======
+>>>>>>> 00e2890d183469c66e65633206fcdc1bddf4baae
 }
 
 .region-image {

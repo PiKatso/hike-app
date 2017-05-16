@@ -1,7 +1,3 @@
-require "hike_app"
-require "rspec"
-require "pry"
-
 ENV['RACK_ENV'] = 'test'
 
 require 'bundler/setup'

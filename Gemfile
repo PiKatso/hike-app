@@ -1,14 +1,16 @@
-source "https://rubygems.org"
-# ruby "2.4.1"
+source 'https://rubygems.org'
 
 gem "sinatra"
-gem "sinatra-contrib"
 gem 'rest-open-uri'
 gem 'geocoder'
-gem "pg"
+gem "sinatra-contrib", require: "sinatra/reloader"
 gem "sinatra-activerecord"
 gem "rake"
-gem 'shoulda-matchers', '~> 2.0'
-gem "rspec"
-gem "capybara"
-gem "pry"
+gem "pg"
+
+group :test do
+  gem "rspec"
+  gem "capybara"
+  gem "pry"
+  gem 'shoulda-matchers', '~> 2.0'
+end
