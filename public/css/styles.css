@@ -28,6 +28,7 @@ a:hover {
 /*FOOTER STYLES*/
 
 #footer {
+  padding: 15px 0;
   position: fixed;
   right: 0;
   bottom: 0;
@@ -38,6 +39,8 @@ a:hover {
 }
 
 #footer a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
   padding: 10px 30px;
 }
 
@@ -123,7 +126,7 @@ a:hover {
 }
 
 .hike-main {
-  padding: 50px;
+  padding: 0 50px 50px 50px;
 }
 
 .hike-main h1 {
