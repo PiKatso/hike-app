@@ -33,11 +33,7 @@ data.each do |hike|
 end
 
 data.each do |hike|
-  name = hike[:name]
-  distance = value["printouts"]["Distance"][0]
-  elevation = value["printouts"]["Elevation gain"][0]
-  difficulty = value["printouts"]["Difficulty"][0]
-  hike = Hike.create({
+  Hike.create({
     name: hike[:name],
     distance: hike[:distance],
     elevation: hike[:elevation],
@@ -46,5 +42,4 @@ data.each do |hike|
     latitude: hike[:lat],
     longitude: hike[:lon]
     })
-
 end
