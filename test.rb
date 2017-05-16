@@ -31,3 +31,20 @@ data.each do |hike|
   hike[:lat] = page.css('div#mw-content-text ul')[0].children[0].children.text.scan(/(-?\d+.\d+)/)[0][0]
   hike[:lon] = page.css('div#mw-content-text ul')[0].children[1].children.text.scan(/(-?\d+.\d+)/)[0][0]
 end
+
+data.each do |hike|
+  name = hike[:name]
+  distance = value["printouts"]["Distance"][0]
+  elevation = value["printouts"]["Elevation gain"][0]
+  difficulty = value["printouts"]["Difficulty"][0]
+  hike = Hike.create({
+    name: hike[:name],
+    distance: hike[:distance],
+    elevation: hike[:elevation],
+    difficulty: hike[:difficulty],
+    url: hike[:url],
+    latitude: hike[:lat],
+    longitude: hike[:lon]
+    })
+
+end
