@@ -9,7 +9,11 @@ class Hike < ActiveRecord::Base
     zip = geo_result[0].data['address_components'].last['long_name']
     api_result = RestClient.get "http://api.wunderground.com/api/3df9e5569912899b/geolookup/conditions/q/#{zip}.json"
     jhash = JSON.parse(api_result)
-    jhash['current_observation']['weather']
+    unless jhash['current_observation'].nil?
+      jhash['current_observation']['weather']
+    else
+      "Unknown"
+    end
   end
 
 end

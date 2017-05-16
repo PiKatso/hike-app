@@ -1,12 +1,12 @@
 require "bundler/setup"
 Bundler.require :default
 
-# NOTE: check laptop
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file}
 require 'pry'
-
-
 also_reload('lib/**/*.rb')
+
+# NOTE: comment Populate.run when running tests
+Populate.run
 
 get('/') do
   erb :index
