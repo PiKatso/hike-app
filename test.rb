@@ -1,7 +1,10 @@
-require "./spec/spec_helper"
+require "sinatra/activerecord"
 require "json"
 require "nokogiri"
 require "open-uri"
+require "pry"
+
+Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 
 obj = JSON.parse(File.read('example.json'))
 

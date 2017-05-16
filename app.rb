@@ -1,14 +1,7 @@
-require 'sinatra'
-require 'sinatra/reloader'
-require 'sinatra/activerecord'
-require './lib/hike_app'
-require 'pry'
-require 'json'
-require 'rest-client'
-require 'geocoder'
+require "bundler/setup"
+Bundler.require :default
 
-
-also_reload('lib/**/*.rb')
+Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 
 get('/') do
   # geo_result = Geocoder.search("45.54277,-122.23769")
@@ -16,7 +9,6 @@ get('/') do
   # api_result = RestClient.get "http://api.wunderground.com/api/3df9e5569912899b/geolookup/conditions/q/#{zip}.json"
   # jhash = JSON.parse(api_result)
   # @current_weather = jhash['current_observation']['weather']
-  binding.pry
   erb :index
 end
 
