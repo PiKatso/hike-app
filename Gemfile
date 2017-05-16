@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem "sinatra"
+gem 'rest-open-uri'
+gem 'geocoder'
 gem "sinatra-contrib", require: "sinatra/reloader"
 gem "sinatra-activerecord"
 gem "rake"
