@@ -19,3 +19,8 @@ describe HikeRating do
   it { should belong_to :hike }
   it { should belong_to :rating }
 end
+
+describe Region do
+
+
+end
