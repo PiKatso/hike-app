@@ -1,1 +1,61 @@
-<h1>Display search function here</h1>
+<h1>Search Hikes</h1>
+
+  <form class="region">
+  <div class="search-group">
+    <h2>Region</h2>
+    <div class="form-group">
+      <label class="radio-inline"><input type="radio" name="radio" value="Gorge" checked> All</label>
+      <label class="radio-inline"><input type="radio" name="radio" value="Gorge" checked> Gorge</label>
+      <label class="radio-inline"><input type="radio" name="radio" value="Coast"> Coast</label>
+      <label class="radio-inline"><input type="radio" name="radio" value="Urban"> Urban</label>
+      <label class="radio-inline"><input type="radio" name="radio" value="Tillamook"> Tillamook</label>
+    </div>
+  </div>
+  <div class="search-group">
+    <div class="form-group">
+      <label for="search">Hike Search:</label>
+      <input class="form-control" type="text" name="search">
+    </div>
+  </div>
+  <div class="search-group">
+    <h3>Which major landmarks would you perfer?</h3>
+    <div class="checkbox">
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Mountains" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="region" value=><%= "Lakes" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="region" value=><%= "Rivers" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="region" value=><%= "Wetlands" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="region" value=><%= "Forrests" %>
+     </label>
+    </div>
+  </div>
+  <div class="search-group">
+    <h3>Which features are you looking for?</h3>
+    <div class="checkbox">
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Waterfalls" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="region" value=><%= "Wildflowers" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="region" value=><%= "Historical Tails" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="region" value=><%= "Viewpoints" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="region" value=><%= "Ponds" %>
+     </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-info">Search</button>
+</form>
