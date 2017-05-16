@@ -1,11 +1,9 @@
-require 'sinatra'
-require 'sinatra/reloader'
-require 'sinatra/activerecord'
-require './lib/hike_app'
+require "bundler/setup"
+Bundler.require :default
+
+# NOTE: check laptop
+Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file}
 require 'pry'
-require 'json'
-require 'rest-client'
-require 'geocoder'
 
 
 also_reload('lib/**/*.rb')
