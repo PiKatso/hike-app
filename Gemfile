@@ -10,3 +10,6 @@ gem "rspec"
 gem "capybara"
 gem "pry"
 gem "pg"
+gem 'rest-open-uri'
+gem 'json'
+gem 'geocoder'

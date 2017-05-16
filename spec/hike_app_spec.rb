@@ -17,11 +17,6 @@ describe Landmark do
   it { should have_and_belong_to_many :hikes }
 end
 
-describe HikeRating do
-  it { should belong_to :hike }
-  it { should belong_to :rating }
-end
-
 describe Region do
 
 

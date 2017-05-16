@@ -1,8 +1,8 @@
 # _Hike App_
 
-#### _Application for shoe brands and shoe stores. Built with Ruby, 12 May 2017_
+#### _Application for finding Oregon hikes. Built with Ruby, 12 May 2017_
 
-#### _By: **Aubrey Masten**_
+#### _By: **Aubrey Masten, Ben Williams, Kai deRochemont, Kat Gifford, Tyler Stephenson**_
 
 ## Description
 
@@ -12,7 +12,7 @@ This project was created at [Epicodus](https://www.epicodus.com/) in a day, for 
 
 | Behavior | Input | Output |
 |----------|:-----:|:------:|
-| User can create shoe stores. | Click Shoe Stores, enter store name, click 'Add store'. | New store will display in 'All Stores' list. |
+| User can find hikes. | Click Shoe Stores, enter store name, click 'Add store'. | New store will display in 'All Stores' list. |
 | User can add shoe brands to the database. | Click Shoe Brands, enter brand's name and price, click 'Add brand'. | New brand will display in 'All Brands' list. |
 | User can add a brand to a store's inventory. | Click store's name. Select brands from list. Click submit. | Brand names display in the store's details page. |
 
