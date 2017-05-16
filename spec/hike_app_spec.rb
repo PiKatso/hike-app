@@ -6,13 +6,12 @@ describe Hike do
   it { should have_and_belong_to_many :landmarks }
   it { should validate_uniqueness_of :name}
 
-
-  # describe "#weather" do
-  #   it "reurns the current weather observation" do
-  #     new_hike = Hike.create({name: "awesome hike", latitude: "45.54277", longitude: "-122.23769"})
-  #
-  #   end
-  # end
+  describe "#weather" do
+    it "reurns the current weather observation" do
+      hike = Hike.create(name: "test hike", latitude: '45.54277', longitude: '-122.23769')
+      expect(hike.weather).to be_a(String)
+    end
+  end
 
 end
 

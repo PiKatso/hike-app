@@ -1,14 +1,14 @@
 require "bundler/setup"
 Bundler.require :default
 
-Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
+# NOTE: check laptop
+Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file}
+require 'pry'
+
+
+also_reload('lib/**/*.rb')
 
 get('/') do
-  # geo_result = Geocoder.search("45.54277,-122.23769")
-  # zip = geo_result[0].data['address_components'].last['long_name']
-  # api_result = RestClient.get "http://api.wunderground.com/api/3df9e5569912899b/geolookup/conditions/q/#{zip}.json"
-  # jhash = JSON.parse(api_result)
-  # @current_weather = jhash['current_observation']['weather']
   erb :index
 end
 
