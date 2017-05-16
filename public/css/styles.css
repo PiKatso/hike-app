@@ -84,6 +84,7 @@ a:hover {
 .region {
   font-size: 25px;
   font-family: 'News Cycle', sans-serif;
+  color: #656565;
 }
 
 .region input[type="radio"] {
@@ -140,4 +141,8 @@ a:hover {
 .stats {
   font-weight: 200;
   color: #3d79af;
+}
+
+.hike-section {
+  padding-bottom: 30px;
 }
