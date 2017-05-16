@@ -1,15 +1,14 @@
 source "https://rubygems.org"
 # ruby "2.4.1"
 
-gem 'shoulda-matchers', '~> 2.0'
 gem "sinatra"
 gem "sinatra-contrib"
+gem 'rest-open-uri'
+gem 'geocoder'
+gem "pg"
 gem "sinatra-activerecord"
 gem "rake"
+gem 'shoulda-matchers', '~> 2.0'
 gem "rspec"
 gem "capybara"
 gem "pry"
-gem "pg"
-gem 'rest-open-uri'
-gem 'json'
-gem 'geocoder'
