@@ -6,6 +6,8 @@ class Hike < ActiveRecord::Base
   has_many :hike_ratings
   has_many :ratings, through: :hike_ratings
 
+  validates :name, uniqueness: true
+
   def weather
     geo_result = Geocoder.search("#{self.latitude},#{self.longitude}")
     zip = geo_result[0].data['address_components'].last['long_name']
