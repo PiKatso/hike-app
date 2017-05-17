@@ -6,15 +6,15 @@ describe Hike do
   it { should have_and_belong_to_many :landmarks }
   it { should validate_uniqueness_of :name}
 
-  describe "#weather" do
-    it "reurns the current weather observation" do
+  describe '#get_zip' do
+    it 'returns the zip code for the hike trail head' do
       hike = Hike.create(name: "test hike", latitude: '45.54277', longitude: '-122.23769')
-      expect(hike.weather).to be_a(String)
+      expect(hike.get_zip).to eq("97019")
     end
   end
 
   describe "#forecast" do
-    it "reurns the current weather forecast" do
+    it "returns the current weather forecast" do
       hike = Hike.create(name: "test hike", latitude: '45.54277', longitude: '-122.23769')
       expect(hike.forecast).to be_a(Array)
     end

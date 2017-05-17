@@ -6,7 +6,7 @@ require 'pry'
 also_reload('lib/**/*.rb')
 
 # NOTE: comment Populate.run when running tests
-Populate.run
+# Populate.run
 
 get('/') do
   erb :index
@@ -22,6 +22,9 @@ end
 get('/hikes/:id') do
   hike_id = params['id']
   @hike = Hike.find(hike_id)
+  weather = @hike.forecast
+  @current_weather = weather.shift
+  @forecast = weather
   erb :hike
 end
 
