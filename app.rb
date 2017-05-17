@@ -28,6 +28,12 @@ get('/hikes/:id') do
   erb :hike
 end
 
+get '/features/:id' do
+  feature_id = params['id']
+  @feature = Feature.find(feature_id)
+  erb :feature
+end
+
 get '/map' do
   erb :map
 end
