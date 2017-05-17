@@ -19,6 +19,17 @@
     </p>
   </div>
   <div class="hike-section">
+    <h1>3 Day Forecast</h1>
+    <table class="forecast">
+      <% @hike.forecast.each do |t| %>
+        <tr>
+          <td><%= t[0] %></td>
+          <td><%= t[1] %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+  <div class="hike-section">
     <h1>Features</h1>
     <p>Waterfall, Racoons, Table Service, Snakes, Wildflowers, Ponderosa Pines.</p>
   </div>

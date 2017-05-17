@@ -13,6 +13,13 @@ describe Hike do
     end
   end
 
+  describe "#forecast" do
+    it "reurns the current weather forecast" do
+      hike = Hike.create(name: "test hike", latitude: '45.54277', longitude: '-122.23769')
+      expect(hike.forecast).to be_a(Array)
+    end
+  end
+
 end
 
 describe Feature do

@@ -18,4 +18,20 @@ class Hike < ActiveRecord::Base
     jhash['current_observation']['weather']
   end
 
+  def forecast
+    forecast = []
+
+    geo_result = Geocoder.search("#{self.latitude},#{self.longitude}")
+    zip = geo_result[0].data['address_components'].last['long_name']
+    api_result = RestClient.get "http://api.wunderground.com/api/3df9e5569912899b/geolookup/forecast/q/#{zip}.json"
+    jhash = JSON.parse(api_result)
+    jhash['forecast']['txt_forecast']['forecastday'].each do |day|
+      array = []
+      array.push(day['title'])
+      array.push(day['fcttext'])
+      forecast.push(array)
+    end
+    forecast
+  end
+
 end
