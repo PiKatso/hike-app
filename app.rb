@@ -41,10 +41,3 @@ end
 get '/search' do
   erb :search
 end
-
-get '/hike/random' do
-
-  @hike = Hike.all[rand(Hike.count)]
-
-  erb :hike
-end

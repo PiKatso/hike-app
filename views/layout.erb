@@ -23,8 +23,8 @@
       <a href="/map">Map</a> .
       <a href="/">Home</a> .
       <a href="/map">Features</a> .
-      <a href="/map">Landmarks</a>
-      <a href="/hike/random">Return a random hike</a> .
+      <a href="/map">Landmarks</a> .
+      <a href="/hikes/<%= rand(Hike.count) %>">Return a random hike</a>
     </div>
   </body>
 </html>
