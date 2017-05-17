@@ -22,6 +22,9 @@ end
 get('/hikes/:id') do
   hike_id = params['id']
   @hike = Hike.find(hike_id)
+  weather = @hike.forecast
+  @current_weather = weather.shift
+  @forecast = weather
   erb :hike
 end
 

@@ -2,7 +2,7 @@
   <img class="hike-image" src="../img/coyote_wall.jpg" alt="image of coyote wall">
   <h1><%= @hike.name %></h1>
   <hr>
-  <p class="hike-details">Current Weather: <span class="stats"><%= @hike.weather %></span></p>
+  <p class="hike-details">Current Weather: <span class="stats"><%= @current_weather %></span></p>
   <hr>
   <p class="hike-details">Difficulty: <span class="stats"><%= @hike.difficulty %></span></p>
   <hr>
@@ -21,7 +21,7 @@
   <div class="hike-section">
     <h1>3 Day Forecast</h1>
     <table class="forecast">
-      <% @hike.forecast.each do |t| %>
+      <% @forecast.each do |t| %>
         <tr>
           <td><%= t[0] %></td>
           <td><%= t[1] %></td>
