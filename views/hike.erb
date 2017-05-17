@@ -20,14 +20,12 @@
   </div>
   <div class="hike-section">
     <h1>3 Day Forecast</h1>
-    <table class="forecast">
+    <div id="forecast">
       <% @hike.forecast.each do |t| %>
-        <tr>
-          <td><%= t[0] %></td>
-          <td><%= t[1] %></td>
-        </tr>
+        <h3><%= t[0] %></h3>
+        <%= t[1] %>
       <% end %>
-    </table>
+    </div>
   </div>
   <div class="hike-section">
     <h1>Features</h1>
