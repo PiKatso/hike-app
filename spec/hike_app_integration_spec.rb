@@ -28,3 +28,19 @@ describe("the random hike generator path", {:type => :feature}) do
     expect(page).to have_content('Current Weather')
   end
 end
+
+describe("the search preferences path", {:type => :feature}) do
+  it("lets the user select their preferences to find matching hikes") do
+    visit("/")
+    click_link("Search")
+    expect(page).to have_content('Which features are you looking for?')
+  end
+end
+
+describe("the search preferences path", {:type => :feature}) do
+  it("lets the user select their preferences to find matching hikes") do
+    visit("/")
+    click_link("Features")
+    expect(page).to have_content('Features')
+  end
+end

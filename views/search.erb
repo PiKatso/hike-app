@@ -1,4 +1,4 @@
-<h1>Search Hikes</h1>
+<h1>Search</h1>
 
   <form class="region">
   <div class="search-group">
@@ -12,49 +12,19 @@
     </div>
   </div>
   <div class="search-group">
-    <div class="form-group">
-      <label for="search">Hike Search:</label>
-      <input class="form-control" type="text" name="search">
-    </div>
-  </div>
-  <div class="search-group">
-    <h3>Which major landmarks would you perfer?</h3>
-    <div class="checkbox">
-     <label class="check">
-       <input type="checkbox" name="feature" value=><%= "Mountains" %>
-     </label>
-     <label class="check">
-       <input type="checkbox" name="region" value=><%= "Lakes" %>
-     </label>
-     <label class="check">
-       <input type="checkbox" name="region" value=><%= "Rivers" %>
-     </label>
-     <label class="check">
-       <input type="checkbox" name="region" value=><%= "Wetlands" %>
-     </label>
-     <label class="check">
-       <input type="checkbox" name="region" value=><%= "Forrests" %>
-     </label>
-    </div>
-  </div>
-  <div class="search-group">
     <h3>Which features are you looking for?</h3>
     <div class="checkbox">
+      <% Feature.all.each do |feature| %>
      <label class="check">
-       <input type="checkbox" name="feature" value=><%= "Waterfalls" %>
+       <input type="checkbox" name="feature" value="<%= feature.id %>"><%= feature.name %>
      </label>
-     <label class="check">
-       <input type="checkbox" name="region" value=><%= "Wildflowers" %>
-     </label>
-     <label class="check">
-       <input type="checkbox" name="region" value=><%= "Historical Tails" %>
-     </label>
-     <label class="check">
-       <input type="checkbox" name="region" value=><%= "Viewpoints" %>
-     </label>
-     <label class="check">
-       <input type="checkbox" name="region" value=><%= "Ponds" %>
-     </label>
+     <% end %>
+    </div>
+  </div>
+  <div class="search-group">
+    <div class="form-group">
+      <label for="search">Hike Name:</label>
+      <input class="form-control" type="text" name="search">
     </div>
   </div>
   <button type="submit" class="btn btn-lg btn-info">Search</button>
