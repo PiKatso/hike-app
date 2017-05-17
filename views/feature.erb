@@ -1,0 +1,5 @@
+<h1>Hikes featuring <%= @feature.name %><% unless @feature.name.last == "s" %>s<% end %></h1>
+<hr>
+<% @feature.hikes.each do |hike| %>
+  <a href="/hikes/<%= hike.id %>"><h3><%= hike.name %></h3></a>
+<% end %>

@@ -5,6 +5,7 @@ h1 {
 
 h2, h3, h4, h5 {
   font-family: 'News Cycle', sans-serif;
+  color: #656565;
 }
 
 a {
@@ -128,7 +129,7 @@ a:hover {
 }
 
 .hike-main {
-  padding: 0 50px 50px 50px;
+  padding: 0 50px 200px 50px;
 }
 
 .hike-main h1 {
@@ -150,24 +151,21 @@ a:hover {
   padding-bottom: 30px;
 }
 
-table.forecast {
-
-  width: 100%;
-}
-
-table.forecast tr td:first-child {
-  border-right: 1px solid #6687a5;
-}
-
-table.forecast tr td {
-  border-bottom: 1px solid #6687a5;
-  padding-bottom: 10px;
-}
-
-table.forecast tr td:last-child {
-  text-align: center;
+.day {
+  font-family: 'Montserrat', sans-serif;
 }
 
 #map {
   height: 350px;
+}
+
+.feature {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 10px 10px 10px 0;
+  background: #e6e6e6;
+}
+
+.feature p {
+  margin: 0;
 }

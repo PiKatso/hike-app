@@ -19,24 +19,27 @@
     </p>
   </div>
   <div class="hike-section">
-    <h1>3 Day Forecast</h1>
+    <h1>4 Day Forecast</h1>
     <div id="forecast">
       <% @hike.forecast.each do |t| %>
-        <h3><%= t[0] %></h3>
-        <%= t[1] %>
+        <h3 class="day"><%= t[0] %></h3>
+        <p><%= t[1] %></p>
       <% end %>
     </div>
   </div>
   <div class="hike-section">
     <h1>Features</h1>
-    <p>Waterfall, Racoons, Table Service, Snakes, Wildflowers, Ponderosa Pines.</p>
+    <!-- <p>Waterfall, Racoons, Table Service, Snakes, Wildflowers, Ponderosa Pines.</p> -->
+    <% @hike.features.each do |feature| %>
+      <a href="/features/<%= feature.id %>"><div class="feature"><p><%= feature.name %></p></div></a>
+    <% end %>
   </div>
   <div class="hike-section" id="map">
     <script>
       function initMap() {
         var uluru = {lat: <%= @hike.latitude %>, lng: <%= @hike.longitude %>};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 18,
+          zoom: 13,
           center: uluru
         });
         var marker = new google.maps.Marker({
