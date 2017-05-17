@@ -19,12 +19,25 @@
     </p>
   </div>
   <div class="hike-section">
-    <h1>Landmarks</h1>
-    <p>Multnomah Falls.</p>
-  </div>
-  <div class="hike-section">
     <h1>Features</h1>
     <p>Waterfall, Racoons, Table Service, Snakes, Wildflowers, Ponderosa Pines.</p>
   </div>
-
+  <div class="hike-section" id="map">
+    <script>
+      function initMap() {
+        var uluru = {lat: <%= @hike.latitude %>, lng: <%= @hike.longitude %>};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcjEk5jS3E7WYPLMJp9OqgwoXt9VK4u1A&callback=initMap">
+    </script>
+  </div>
 </div>

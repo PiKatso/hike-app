@@ -132,6 +132,7 @@ a:hover {
 }
 
 .hike-main h1 {
+  margin: 0;
 }
 
 .hike-main p {
@@ -146,4 +147,8 @@ a:hover {
 
 .hike-section {
   padding-bottom: 30px;
+}
+
+#map {
+  height: 350px;
 }
