@@ -6,7 +6,7 @@ require 'pry'
 also_reload('lib/**/*.rb')
 
 # NOTE: comment Populate.run when running tests
-Populate.run
+# Populate.run
 
 get('/') do
   erb :index
