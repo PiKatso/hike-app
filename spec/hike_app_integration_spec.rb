@@ -12,6 +12,15 @@ describe("the region path", {:type => :feature}) do
   end
 end
 
+describe("the region to hike path", {:type => :feature}) do
+  it("lets the user select a region to select a specific hike from") do
+    visit("/")
+    click_link("Urban Sprawl")
+    click_link("Chicken Creek Loop Hike")
+    expect(page).to have_content('4 Day Forecast')
+  end
+end
+
 describe("the random hike generator path", {:type => :feature}) do
   it("lets the user select be suggested a random hike") do
     visit("/")

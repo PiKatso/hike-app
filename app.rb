@@ -34,8 +34,8 @@ get '/features/:id' do
   erb :feature
 end
 
-get '/map' do
-  erb :map
+get '/features' do
+  erb :features
 end
 
 get '/search' do
