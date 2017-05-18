@@ -6,15 +6,18 @@
 
 ## Description
 
-This project was created at [Epicodus](https://www.epicodus.com/) in a day, for an individual code review. Built after the fourth week of classes in **Ruby** to demonstrate an understanding of PostgreSQL databases, [Active Record](https://github.com/rails/rails/tree/master/activerecord) and many-to-many database relationships. All back-end behaviors were tested using RSpec and all front-end behaviors using RSpec and Capybara. The front end was built using Sinatra. It allows a user to create shoe stores, save information on shoe brands and keep track of which stores carry which brands. All information from the front end is processed in Ruby and stored in a SQL database using Active Record.
+This project was created at [Epicodus](https://www.epicodus.com/) in 3.5 days for a group project. Built after the fourth week of classes in **Ruby** to demonstrate an understanding of PostgreSQL databases, [Active Record](https://github.com/rails/rails/tree/master/activerecord) and many-to-many database relationships. All back-end behaviors were tested using RSpec and all front-end behaviors using RSpec and Capybara. The front end was built using Sinatra. It allows a user to create search for and access hikes in Oregon based on specific criteria. This project uses information sourced from [OregonHikers.org](http://www.oregonhikers.org/).
 
 ## Specifications
 
-| Behavior | Input | Output |
-|----------|:-----:|:------:|
-| User can find hikes. | Click Shoe Stores, enter store name, click 'Add store'. | New store will display in 'All Stores' list. |
-| User can add shoe brands to the database. | Click Shoe Brands, enter brand's name and price, click 'Add brand'. | New brand will display in 'All Brands' list. |
-| User can add a brand to a store's inventory. | Click store's name. Select brands from list. Click submit. | Brand names display in the store's details page. |
+* _As a user, I want to be able to see a list of hikes available to me._
+* _As a user, I want to be able to see a list of hikes available to me by region._
+* _As a user, I want to be able to see a list of hikes available to me by features._
+* _As a user, I want to be able to search available hikes by desired features._
+* _As a user, I want to be able to search available hikes by desired elevation._
+* _As a user, I want to be able to search available hikes by desired difficulty._
+* _As a user, I want to be able to search available hikes by desired distance._
+* _As a user, I want to be able to have a random hike picker for when I'm indecisive_
 
 ## Database Installation
 
@@ -32,13 +35,13 @@ This program relies on a specific database naming conventions. The creation of t
   * `rake db:create`
   * `rake db:migrate`
 
-All unit and integration tests currently rely on a secondary development database named `shoe_store_test`. If you would like to see unit and integration tests running, run this command to get the test database set up.
+All unit and integration tests currently rely on a secondary development database named `hike_app_test`. If you would like to see unit and integration tests running, run this command to get the test database set up.
 
  * `rake db:test:prepare`
 
-## Database Schema
+<!-- ## Database Schema
 
-<img src="http://i.imgur.com/jOT8dxK.png" />
+<img src="http://i.imgur.com/jOT8dxK.png" /> -->
 
 ## Setup/Installation Requirements
 
@@ -47,7 +50,7 @@ To run this site on your own machine you must have Ruby installed. All gems used
 * Clone this repository in a shell using the command:
 `git clone https://github.com/aubreymasten/shoe_stores`
 * Follow Database Installation & Setup instructions above
-* In the `shoe_stores` folder run the command `ruby app.rb`
+* In the `hike_app` folder run the command `ruby app.rb`
 * The site should be available in your browser at `localhost:4567` (the port number (`4567`) may not be accurate on every device. Check your shell, Sinatra should provide you the correct port.)
 
 ## Known Bugs
@@ -56,7 +59,7 @@ All development and setup instructions were tested on macOS using Ruby version 2
 
 ## Support and contact details
 
-_If you have any questions or find any issues with the site, get in touch. My email address is: aubreymasten@gmail.com_
+_If you have any questions or find any issues with the site, get in touch with our developers by emailing Kat Gifford at Katgiff2007@gmail.com_
 
 ## Technologies Used
 
@@ -66,12 +69,15 @@ _If you have any questions or find any issues with the site, get in touch. My em
 * _[RSpec](http://rspec.info/)_
 * _[Sinatra](http://www.sinatrarb.com/)_
 * _[Capybara](https://teamcapybara.github.io/capybara/)_
+* _[Weather Underground API](https://www.wunderground.com/)_
+* _[Google Maps API](https://developers.google.com/maps/)_
+
 
 ## License
 
 MIT License
 
-Copyright (c) 2017 Aubrey Masten
+Copyright (c) 2017 Aubrey Masten, Ben Williams, Kai deRochemont, Kat Gifford & Tyler Stephenson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
