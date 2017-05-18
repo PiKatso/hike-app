@@ -33,7 +33,8 @@ This program depends on a [PostgreSQL](https://www.postgresql.org/) (Postgres) d
 This program relies on a specific database naming conventions. The creation of these databases can be done using the rake gem. Once you have the repository on your computer (instructions below), run the command `bundle install` to install all necessary ruby gems. Then, in your shell, run the following commands to get your database up and running.
 
   * `rake db:create`
-  * `rake db:migrate`
+  * `rake db:schema:load`
+  * `rake db:seed`
 
 All unit and integration tests currently rely on a secondary development database named `hike_app_test`. If you would like to see unit and integration tests running, run this command to get the test database set up.
 
@@ -55,7 +56,7 @@ To run this site on your own machine you must have Ruby installed. All gems used
 
 ## Known Bugs
 
-All development and setup instructions were tested on macOS using Ruby version 2.4.1.
+All development and setup instructions were tested on macOS using Ruby version 2.4.1 and ruby 2.3.1.
 
 ## Support and contact details
 

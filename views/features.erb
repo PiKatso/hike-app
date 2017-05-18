@@ -1,1 +1,5 @@
 <h1>Features</h1>
+<hr>
+<% @features.each do |feature| %>
+  <a href="/features/<%= feature.id %>"><h3><%= feature.name %></h3></a>
+<% end %>

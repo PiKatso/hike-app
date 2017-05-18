@@ -12,13 +12,6 @@ get('/') do
   erb :index
 end
 
-get('/regions/:region') do
-  @region = params['region']
-  @hikes = Hike.all
-  # @region = Region.find(region_id)
-  erb :region
-end
-
 get('/hikes/:id') do
   hike_id = params['id']
   @hike = Hike.find(hike_id)
@@ -35,6 +28,7 @@ get '/features/:id' do
 end
 
 get '/features' do
+  @features = Feature.all
   erb :features
 end
 
@@ -84,4 +78,54 @@ get '/search6' do
   search = params['search6']
   @hikes = Hike.where
   erb :search_results
+end
+
+# REGION ROUTES
+
+get('/portland') do
+  @region = "Portland Area"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/willamette-valley') do
+  @region = "Willamette Valley"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/oregon-coast') do
+  @region = "Oregon Coast"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/columbia-gorge') do
+  @region = "Columbia River Gorge"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/mount-hood') do
+  @region = "Mount Hood"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/central') do
+  @region = "Central Oregon"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/southern') do
+  @region = "Southern Oregon"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/eastern') do
+  @region = "Eastern Oregon"
+  @hikes = Hike.where({region: @region})
+  erb :region
 end

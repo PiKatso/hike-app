@@ -1,5 +1,5 @@
 <h1 class="region-title"><%= @region %></h1>
-<h2>All Hikes in </h2>
+<h2>All Hikes in <%= @region %></h2>
 <hr>
 <% @hikes.each do |hike| %>
   <a href="/hikes/<%= hike.id %>"><h3><%= hike.name %></h3></a>
