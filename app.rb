@@ -83,14 +83,15 @@ get '/search5' do
   erb :search_results
 end
 
-# get '/search6' do
-#   search = params['search6']
-#   binding.pry
-#   @hikes = Hike.all.select do |hike|
-#
-#   end
-#   erb :search_results
-# end
+get '/search6' do
+  binding.pry
+  features = params.fetch("features")
+  @hikes = Hike.all.select do |hike|
+    hike_features = hike.features.map{|f| f.name}
+    features.any? {|feature| hike_features.include?(feature)}
+  end
+  erb :search_results
+end
 
 # REGION ROUTES
 
