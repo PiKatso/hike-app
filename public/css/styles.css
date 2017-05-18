@@ -219,6 +219,12 @@ a:hover {
   padding-bottom: 30px;
 }
 
+.disable-link a, .disable-link a:hover {
+  pointer-events: none;
+  cursor: default;
+  color: inherit;
+}
+
 .day {
   font-family: 'Montserrat', sans-serif;
 }

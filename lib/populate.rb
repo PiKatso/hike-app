@@ -35,25 +35,24 @@ module Populate
   end
 
   def self.desc (url)
-    # begin
-    #   page = Nokogiri::HTML(open("#{url}"))
-    #   page.css("p").first.to_s.gsub(/(<.+">)/, "").gsub(/<[\/].>/,"")
-    # rescue
+    begin
+      page = Nokogiri::HTML(open("#{url}"))
+      page.css("p").first.to_s.gsub(/<.?>/, "").gsub(/<[\/]p>/,"").gsub(/\n/, "")
+    rescue
       "Jeffrey Lynn 'Jeff' Goldblum is an American actor who has received nominations for an Oscar, an Emmy, a Genie and a Drama Desk Award throughout his career and is best known for starring in the highest-grossing films of his era, Jurassic Park (1993) and Independence Day (1996), as well as their respective sequels, The Lost World: Jurassic Park (1997), Independence Day: Resurgence (2016), and Jurassic World 2 (2018). Goldblum starred in films including Invasion of the Body Snatchers (1978), The Big Chill (1983) and Into the Night (1985) before coming to the attention of wider audiences in David Cronenberg's The Fly (1986) which earned him a Saturn Award for Best Actor."
-    # end
+    end
   end
 
   def self.coords (url, axis)
     begin
       page = Nokogiri::HTML(open("#{url}"))
       url = page.css('div#mw-content-text ul li')[0].element_children[0].attributes["href"].value
-        page = Nokogiri::HTML(open("http://www.oregonhikers.org#{url}"))
-
+      page = Nokogiri::HTML(open("http://www.oregonhikers.org#{url}"))
       case axis
       when :lat
-        page.css('div#mw-content-text ul')[0].children.children.to_a.select{|e| e.class ==  Nokogiri::XML::Text}.select{|e| e.text.include?("Latitude")}.first.to_s.scan(/(-?\d+.\d+)/)[0][0]
+        page.css('div#mw-content-text ul')[0].children.children.to_a.select{|e| e.class == Nokogiri::XML::Text}.select{|e| e.text.include?("Latitude")}.first.to_s.scan(/(-?\d+.\d+)/)[0][0]
       when :lon
-        page.css('div#mw-content-text ul')[0].children.children.to_a.select{|e| e.class ==  Nokogiri::XML::Text}.select{|e| e.text.include?("Longitude")}.first.to_s.scan(/(-?\d+.\d+)/)[0][0]
+        page.css('div#mw-content-text ul')[0].children.children.to_a.select{|e| e.class == Nokogiri::XML::Text}.select{|e| e.text.include?("Longitude")}.first.to_s.scan(/(-?\d+.\d+)/)[0][0]
       end
     rescue
       case axis
@@ -104,7 +103,6 @@ module Populate
       end
     end
     hikes.flatten!
-    hikes
   end
 
   def self.save_all
@@ -123,7 +121,6 @@ module Populate
         img_src: data[:img]
       })
       hike.features.push(Feature.find_by({name: data[:feature]}))
-      # TODO: add region addition code
     end
   end
 end

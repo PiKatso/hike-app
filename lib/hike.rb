@@ -1,6 +1,6 @@
 class Hike < ActiveRecord::Base
   has_and_belongs_to_many :features
-  validates :name, uniqueness: true
+  validates :name, uniqueness: { case_sensitive: false }
 
   def get_zip
     geo_result = Geocoder.search("#{self.latitude},#{self.longitude}")
