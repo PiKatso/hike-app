@@ -92,7 +92,6 @@ get '/search5' do
 end
 
 get '/search6' do
-  binding.pry
   features = params.fetch("features")
   @hikes = Hike.all.select do |hike|
     hike_features = hike.features.map{|f| f.name}
@@ -129,7 +128,7 @@ end
 
 get('/mount-hood') do
   @region = "Mount Hood"
-  @hikes = Hike.where({region: @region})
+  @hikes = Hike.where({region: "Washington Coast"})
   erb :region
 end
 

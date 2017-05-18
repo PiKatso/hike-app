@@ -95,8 +95,8 @@ module Populate
 
   def self.all
     hikes = []
-    self.regions[0..1].each do |region|
-      self.features[0..1].each do |feature|
+    self.regions.each do |region|
+      self.features.each do |feature|
         url = self.url(region, feature)
         data = self.parse(url, region, feature)
         hikes.push(data)
