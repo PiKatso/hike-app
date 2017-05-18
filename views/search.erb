@@ -1,61 +1,181 @@
-<h1>Search Hikes</h1>
+<h1>Enter criteria to search Hikes</h1>
 
-  <form class="region">
-  <div class="search-group">
+  <div class="search-group" id="search1">
+    <form action="/search1">
+      <div class="form-group">
+        <label for="search1">Search Hike by Name:</label>
+        <input class="form-control" type="text" name="search1">
+        <button type="submit" class="btn btn-lg btn-info">Search</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="search-group" id="search2" action="/search2">
+    <label for="search2">Distance:</label>
+    <select>
+      <option disabled selected value> -- select an option -- </option>
+      <option value="shortest">0-2 miles</option>
+      <option value="short">2 to 5 miles</option>
+      <option value="medium">5 to 10 miles</option>
+      <option value="long">Over 10 miles</option>
+    </select>
+    <button type="submit" class="btn btn-lg btn-info">Search</button>
+
+  </div>
+
+  <div class="search-group" id="search3" action="/search3">
+    <h2>Elevation</h2>
+    <select>
+      <option disabled selected value> -- select an option -- </option>
+      <option value="lowest">0-50 ft. elevation change</option>
+      <option value="low">50 to 200 ft. elevation change</option>
+      <option value="high">201 to 500 ft. elevation change</option>
+      <option value="highest">over 500 ft. elevation change</option>
+    </select>
+    <button type="submit" class="btn btn-lg btn-info">Search</button>
+
+  </div>
+
+  <div class="search-group" id="search4" action="/search4">
+    <h2>Elevation</h2>
+    <select>
+      <option disabled selected value> -- select an option -- </option>
+      <option value="easy">easy</option>
+      <option value="moderate">moderate</option>
+      <option value="difficult">difficult</option>
+    </select>
+    <button type="submit" class="btn btn-lg btn-info">Search</button>
+
+  </div>
+
+  <div class="search-group" id="search5" action="/search5">
     <h2>Region</h2>
-    <div class="form-group">
-      <label class="radio-inline"><input type="radio" name="radio" value="Gorge" checked> All</label>
-      <label class="radio-inline"><input type="radio" name="radio" value="Gorge" checked> Gorge</label>
-      <label class="radio-inline"><input type="radio" name="radio" value="Coast"> Coast</label>
-      <label class="radio-inline"><input type="radio" name="radio" value="Urban"> Urban</label>
-      <label class="radio-inline"><input type="radio" name="radio" value="Tillamook"> Tillamook</label>
-    </div>
+    <select>
+      <option disabled selected value> -- select an option -- </option>
+      <option value="portland">Portland</option>
+      <option value="willamette_valley">Willamette Valley</option>
+      <option value="oregon_coast">Oregon Coast</option>
+      <option value="columbia_river_gorge">Columbia River Gorge</option>
+      <option value="mount_hood">Mount Hood</option>
+      <option value="central_oregon">Central Oregon</option>
+      <option value="southern_oregon">Southern Oregon</option>
+      <option value="eastern_oregon">Eastern Oregon</option>
+    </select>
+    <button type="submit" class="btn btn-lg btn-info">Search</button>
+
   </div>
-  <div class="search-group">
-    <div class="form-group">
-      <label for="search">Hike Search:</label>
-      <input class="form-control" type="text" name="search">
-    </div>
-  </div>
-  <div class="search-group">
-    <h3>Which major landmarks would you perfer?</h3>
+
+
+  <div class="search-group" id="search6" action="/search6">
+    <h3>Which features are you looking for in your hike?</h3>
     <div class="checkbox">
      <label class="check">
-       <input type="checkbox" name="feature" value=><%= "Mountains" %>
+       <input type="checkbox" name="feature" value=><%= "All Season" %>
      </label>
      <label class="check">
-       <input type="checkbox" name="region" value=><%= "Lakes" %>
+       <input type="checkbox" name="feature" value=><%= "Alpine" %>
      </label>
      <label class="check">
-       <input type="checkbox" name="region" value=><%= "Rivers" %>
+       <input type="checkbox" name="feature" value=><%= "Backpackable" %>
      </label>
      <label class="check">
-       <input type="checkbox" name="region" value=><%= "Wetlands" %>
+       <input type="checkbox" name="feature" value=><%= "Beach" %>
      </label>
      <label class="check">
-       <input type="checkbox" name="region" value=><%= "Forrests" %>
-     </label>
-    </div>
-  </div>
-  <div class="search-group">
-    <h3>Which features are you looking for?</h3>
-    <div class="checkbox">
-     <label class="check">
-       <input type="checkbox" name="feature" value=><%= "Waterfalls" %>
+       <input type="checkbox" name="feature" value=><%= "Bushwhacks" %>
      </label>
      <label class="check">
-       <input type="checkbox" name="region" value=><%= "Wildflowers" %>
+       <input type="checkbox" name="feature" value=><%= "Creek" %>
      </label>
      <label class="check">
-       <input type="checkbox" name="region" value=><%= "Historical Tails" %>
+       <input type="checkbox" name="feature" value=><%= "Crowded" %>
      </label>
      <label class="check">
-       <input type="checkbox" name="region" value=><%= "Viewpoints" %>
+       <input type="checkbox" name="feature" value=><%= "Exposed" %>
      </label>
      <label class="check">
-       <input type="checkbox" name="region" value=><%= "Ponds" %>
+       <input type="checkbox" name="feature" value=><%= "Family" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Glacier" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Hike and Bike" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Hot Spring" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Lake" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Lookout" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Loop" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Lost" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= " Off The Beaten Track
+" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Off Trail" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Old Growth" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Rails to Trails" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Scrambles" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Snowshoe" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Traverse" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Unmaintained Trails" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Universal Access" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Urban" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Viewpoint" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Volcanic Feature" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Waterfall" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Wilderness" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Wildflower" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Wildlife Refuge" %>
+     </label>
+     <label class="check">
+       <input type="checkbox" name="feature" value=><%= "Wildlife Viewing" %>
      </label>
     </div>
   </div>
   <button type="submit" class="btn btn-lg btn-info">Search</button>
-</form>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
