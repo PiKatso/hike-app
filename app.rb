@@ -21,6 +21,14 @@ get('/hikes/:id') do
   erb :hike
 end
 
+get '/random' do
+  @hike = Hike.all[rand(Hike.count)]
+  weather = @hike.forecast
+  @current_weather = weather.shift
+  @forecast = weather
+  erb(:hike)
+end
+
 get '/features/:id' do
   feature_id = params['id']
   @feature = Feature.find(feature_id)
@@ -91,6 +99,56 @@ get '/search6' do
     features.any? {|feature| hike_features.include?(feature)}
   end
   erb :search_results
+end
+
+# REGION ROUTES
+
+get('/portland') do
+  @region = "Portland Area"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/willamette-valley') do
+  @region = "Willamette Valley"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/oregon-coast') do
+  @region = "Oregon Coast"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/columbia-gorge') do
+  @region = "Columbia River Gorge"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/mount-hood') do
+  @region = "Mount Hood"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/central') do
+  @region = "Central Oregon"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/southern') do
+  @region = "Southern Oregon"
+  @hikes = Hike.where({region: @region})
+  erb :region
+end
+
+get('/eastern') do
+  @region = "Eastern Oregon"
+  @hikes = Hike.where({region: @region})
+  erb :region
 end
 
 # REGION ROUTES

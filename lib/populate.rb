@@ -37,7 +37,7 @@ module Populate
   def self.desc (url)
     begin
       page = Nokogiri::HTML(open("#{url}"))
-      page.css("p").first.to_s.gsub(/<.?>/, "").gsub(/<[\/]p>/,"").gsub(/\n/, "")
+      page.css("#mv-content-text p").first.to_s
     rescue
       "Jeffrey Lynn 'Jeff' Goldblum is an American actor who has received nominations for an Oscar, an Emmy, a Genie and a Drama Desk Award throughout his career and is best known for starring in the highest-grossing films of his era, Jurassic Park (1993) and Independence Day (1996), as well as their respective sequels, The Lost World: Jurassic Park (1997), Independence Day: Resurgence (2016), and Jurassic World 2 (2018). Goldblum starred in films including Invasion of the Body Snatchers (1978), The Big Chill (1983) and Into the Night (1985) before coming to the attention of wider audiences in David Cronenberg's The Fly (1986) which earned him a Saturn Award for Best Actor."
     end

@@ -1,9 +1,10 @@
 <div class="col-md-4 hike-sidebar">
-  <!-- <img class="hike-image" src="<%= @hike.img_src %>" alt="image of coyote wall"> -->
   <div class="hike-image" style="background-image: url('<%= @hike.img_src %>');"></div>
   <h1><%= @hike.name %></h1>
   <hr>
   <p class="hike-details">Current Weather: <span class="stats"><%= @current_weather %></span></p>
+  <hr>
+  <p class="hike-details">Region: <span class="stats"><%= @hike.region %></span></p>
   <hr>
   <p class="hike-details">Difficulty: <span class="stats"><%= @hike.difficulty %></span></p>
   <hr>
