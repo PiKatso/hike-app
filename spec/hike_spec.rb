@@ -17,9 +17,4 @@ describe Hike do
       expect(hike.forecast).to be_a(Array)
     end
   end
-
-end
-
-describe Feature do
-  it { should have_and_belong_to_many :hikes }
 end
