@@ -58,7 +58,7 @@
     </form>
   </div>
 
-  <form action="search6" method="get">
+  <form action="/search6" method="get">
     <% Feature.all.each do |feature|%>
       <label for="feature.name">
         <%="<input type='checkbox' name='features[]' value='#{feature.name}'>#{feature.name}"%>
