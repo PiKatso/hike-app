@@ -32,6 +32,14 @@ get '/features' do
   erb :features
 end
 
+get '/random' do
+  weather = @hike.forecast
+  @current_weather = weather.shift
+  @forecast = weather
+  @hike = Hike.all[rand(Hike.count)]
+  erb :hike
+end
+
 get '/search' do
   erb :search
 end
@@ -42,43 +50,47 @@ get '/search1' do
   erb :search_results
 end
 
-# get '/search2' do
-#   search = params['search2']
-#   if search > 10
-#     @hikes = Hike.where(distance: > 10)
-#   elsif search > 5
-#     @hikes = Hike.where(distance: > 5 && <= 10)
-#   elsif search > 2
-#     @hikes = Hike.where(distance: > 2 && <= 5)
-#   else
-#     @hikes = Hike.where(distance: <= 2)
-#   end
-#   erb :search_results
-# end
+get '/search2' do
+  search = params['search2']
+  @hikes = Hike.all.select do |hike|
+    hike.distance.to_f <= search.to_f
+  end
+  erb :search_results
+end
+
 
 get '/search3' do
   search = params['search3']
-  @hikes = Hike.where
+  @hikes = Hike.all.select do |hike|
+    hike.elevation.to_f <= search.to_f
+  end
   erb :search_results
 end
 
 get '/search4' do
   search = params['search4']
-  @hikes = Hike.where
+  @hikes = Hike.all.select do |hike|
+    hike.difficulty == search
+  end
   erb :search_results
 end
 
 get '/search5' do
-  search = params['search5'].upcase
-  @hikes = Hike.where
+  search = params['search5']
+  @hikes = Hike.all.select do |hike|
+    hike.region == search
+  end
   erb :search_results
 end
 
-get '/search6' do
-  search = params['search6']
-  @hikes = Hike.where
-  erb :search_results
-end
+# get '/search6' do
+#   search = params['search6']
+#   binding.pry
+#   @hikes = Hike.all.select do |hike|
+#
+#   end
+#   erb :search_results
+# end
 
 # REGION ROUTES
 
