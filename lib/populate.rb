@@ -25,13 +25,13 @@ module Populate
   end
 
   def self.img (url)
-    # begin
-    #   page = Nokogiri::HTML(open("#{url}"))
-    #   # NOTE: validate that this returns nice urls
-    #   page.css('img').first.attributes["src"].value
-    # rescue
+    begin
+      page = Nokogiri::HTML(open("#{url}"))
+      url = page.css('#mw-content-text img').first.attribute("src").value
+      "http://www.oregonhikers.org#{url}"
+    rescue
       "http://www.gossipcop.com/wp-content/uploads/2014/09/Jeff-Goldblum-Light-Bulbs.png"
-    # end
+    end
   end
 
   def self.desc (url)
