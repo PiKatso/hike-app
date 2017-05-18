@@ -12,16 +12,16 @@
   <body>
 
     <div id="header">
-      <a href="/"><h1>The Hike App</h1></a>
+      <a href="/"><!-- <h1>The Hike App</h1> <--><img src="../img/hike.png" id="logo"></a>
     </div>
     <div class="container" id="main">
 
       <%= yield %>
     </div>
     <div id="footer">
+      <a href="/">Home</a> .
       <a href="/search">Search</a> .
       <a href="/features">Features</a> .
-      <a href="/">Home</a> .
       <a href="/hikes/<%= rand(Hike.count) %>">Random hike</a>
     </div>
   </body>

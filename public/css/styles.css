@@ -16,7 +16,21 @@ a:hover {
   text-decoration: none;
 }
 
+#main {
+  padding: 50px 0 150px 0;
+}
+
 /*HEADER STYLES*/
+
+#logo {
+  height: 250px;
+  margin: 0 auto;
+  display: block;
+}
+
+#header {
+  padding: 50px 0 20px 0;
+}
 
 #header h1 {
   text-align: center;
@@ -47,6 +61,53 @@ a:hover {
 
 /*INDEX STYLES*/
 
+#portland {
+  background-image: url("../img/portland.jpg");
+}
+
+#willamette-valley {
+  background-image: url("../img/willamette-valley.jpg");
+}
+
+#oregon-coast {
+  background-image: url("../img/oregon-coast.jpg");
+}
+
+#columbia-gorge {
+  background-image: url("../img/coyote_wall.jpg");
+}
+
+#mount-hood {
+  background-image: url("../img/mthood.jpg");
+}
+
+#central-oregon {
+  background-image: url("../img/central-oregon.jpg");
+}
+
+#southern-oregon {
+  background-image: url("../img/southern-oregon.jpg");
+}
+
+#eastern-oregon {
+  background-image: url("../img/eastern-oregon.jpg");
+}
+
+
+.bg-image {
+  background-image: url("../img/coyote_wall.jpg");
+  border-radius: 75%;
+  width: 220px;
+  height: 220px;
+  background-size: 220px;
+  padding-top: 70px;  
+}
+
+.region-text {
+  background-color: #ffffff;
+  padding: 10px 0;
+}
+
 .region-title {
   padding-bottom: 30px;
 
@@ -54,7 +115,6 @@ a:hover {
 
 .region-image {
   width: 100%;
-  background-image: url("img/coyote_wall.jpg");
   border-radius: 75%;
   margin: 30px 0;
 }
@@ -65,8 +125,9 @@ a:hover {
 }
 
 .region-box h2 {
-  color: #656565;
-  padding-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  color: #80a0bd;
 }
 
 .region-box p {
@@ -79,6 +140,10 @@ a:hover {
 
 .region-box h2:hover {
   color: #7895af;
+}
+
+.region-row {
+  padding-bottom: 50px;
 }
 
 /*SEARCH STYLES*/
@@ -111,7 +176,8 @@ a:hover {
 /*HIKE PAGE STYLES*/
 
 .hike-image {
-  width: 75%;
+  width: 220px;
+  height: 220px;
   background-image: url("img/coyote_wall.jpg");
   border-radius: 75%;
   margin: 30px 0;
