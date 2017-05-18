@@ -48,10 +48,19 @@ get '/search1' do
   erb :search_results
 end
 
-get '/search2' do
-  search = params['search2']
-  erb :search_results
-end
+# get '/search2' do
+#   search = params['search2']
+#   if search > 10
+#     @hikes = Hike.where(distance: > 10)
+#   elsif search > 5
+#     @hikes = Hike.where(distance: > 5 && <= 10)
+#   elsif search > 2
+#     @hikes = Hike.where(distance: > 2 && <= 5)
+#   else
+#     @hikes = Hike.where(distance: <= 2)
+#   end
+#   erb :search_results
+# end
 
 get '/search3' do
   search = params['search3']
