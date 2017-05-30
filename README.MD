@@ -8,6 +8,8 @@
 
 This project was created at [Epicodus](https://www.epicodus.com/) in 3.5 days for a group project. Built after the fourth week of classes in **Ruby** to demonstrate an understanding of PostgreSQL databases, [Active Record](https://github.com/rails/rails/tree/master/activerecord) and many-to-many database relationships. All back-end behaviors were tested using RSpec and all front-end behaviors using RSpec and Capybara. The front end was built using Sinatra. It allows a user to create search for and access hikes in Oregon based on specific criteria. This project uses information sourced from [OregonHikers.org](http://www.oregonhikers.org/).
 
+![](https://github.com/PiKatso/hike-app/blob/pikatso1/public/img/Screen%20Shot%20.png)
+
 ## Specifications
 
 * _As a user, I want to be able to see a list of hikes available to me._
