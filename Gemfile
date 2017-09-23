@@ -14,3 +14,5 @@ group :test do
   gem "pry"
   gem 'shoulda-matchers', '~> 2.0'
 end
+
+ruby "2.2.2"

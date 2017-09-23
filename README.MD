@@ -51,7 +51,7 @@ All unit and integration tests currently rely on a secondary development databas
 To run this site on your own machine you must have Ruby installed. All gems used in the project are included in the `Gemfile`, and the site was tested using the current bundled `Gemfile.lock`.
 
 * Clone this repository in a shell using the command:
-`git clone https://github.com/aubreymasten/shoe_stores`
+`git clone https://github.com/PiKatso/hike-app.git`
 * Follow Database Installation & Setup instructions above
 * In the `hike_app` folder run the command `ruby app.rb`
 * The site should be available in your browser at `localhost:4567` (the port number (`4567`) may not be accurate on every device. Check your shell, Sinatra should provide you the correct port.)
